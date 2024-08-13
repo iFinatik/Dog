@@ -937,12 +937,12 @@ local function main()
       end
     elseif state.state == "seeking" then
       seek(initial_facing)
-    elseif state.state == "fuel_low" then
+    --[[ elseif state.state == "fuel_low" then
       if return_home() then
         dump_inventory()
         tick_context.fatal("Low on fuel.")
         break
-      end
+      end --]]
     elseif state.state == "inventory_full" then
       if return_home() then
         dump_inventory()
